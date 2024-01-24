@@ -1,5 +1,4 @@
 const express = require('express')
-const userModel=require('../models/userModel')
 const { loginController, registerController } = require('../controllers/userController')
 
 //router object 

@@ -14,13 +14,13 @@ const Login = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "http://localhost:8080/api/users/login",
         { email, password }
       );
       setLoading(false);
       message.success("login success");
       localStorage.setItem(
-        "user",
+        "users",
         JSON.stringify({ ...data.user, password: "" })
       );
       navigate("/");

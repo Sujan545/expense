@@ -16,7 +16,7 @@ const Register = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "http://localhost:8080/api/users/register",
         {
           name,
           email,
@@ -32,12 +32,7 @@ const Register = () => {
       message.error("something went wrong");
     }
   };
-  //prevent or login ser
-  useEffect(() => {
-    if (localStorage.getItem("users")) {
-      navigate("/");
-    }
-  }, [navigate]);
+  //prevent or login se
   return (
     <div className="register-page">
       {loading && <Spinner />}

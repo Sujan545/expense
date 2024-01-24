@@ -22,7 +22,11 @@ app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.urlencoded({ extended: true }));
 
 //routes
+//users route
 app.use("/api/users", require("./routes/userRoute"));
+
+//transecton route
+app.use("/api/transections", require("./routes/transectionRoute"));
 //port
 const PORT = process.env.PORT || 8080;
 

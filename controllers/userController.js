@@ -23,7 +23,7 @@ const loginController = async (req,res) => {
 };
 
 
-//register csllback
+//register callback
 const registerController = async (req, res) => {
     try {
         const newUser = new userModel(req.body)
